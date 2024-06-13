@@ -80,7 +80,7 @@ services:
 
   proxy:
     build:
-      context: ./nginx
+      context: ./ms-api-gateway
       dockerfile: Dockerfile
     depends_on:
        - ms-get
