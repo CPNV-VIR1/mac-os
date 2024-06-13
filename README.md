@@ -1,45 +1,70 @@
-# Spring - REST API
+# MASTER-README
 
-This repository is an example of an api rest spring application.
+The title must be replaced by the application's name>.
 
-## First build
+## Description
 
-Note : To find out which version of jdk to install in your project, check the pom.xlm file!
+This project is designed to .... and the main features are ...
 
-* After cloning this repository, to retrieve the dependencies, compile and run the program for the first time, Run this command:
+## Getting Started
 
-[INPUT]
+### Prerequisites
+
+List all dependencies and their version needed by the project as :
+
+* DataBase Engine (MySql, PostgreSQL, MSSQL,...)
+* IDE used (PhpStorm, Visual Studio Code, IntelliJ,...)
+* Package manager (Nuget, Composer, npm, ...)
+* OS supported (W2k22, Debian12,...)
+* Virtualization (Docker, .Net, .JDK, .JRE)
+
+### Configuration
+
+How to set up the database?
+How do you set the sensitive data?
+
+## Deployment
+
+### On dev environment
+
+How to get dependencies and build?
+How to run the tests?
+
+### On integration environment
+
+How to deploy the application outside the dev environment.
+
+## Directory structure
+
+* Tip: try the tree bash command
+
+```shell
+├───Docs
+├───Shopping                                        //classes and packages
+│   ├───bin                                         //the binary to deploy on the end-user environment
+│   │   └───Debug
+│   └───obj
+│       └───Debug                                   
+└───TestShopping                                    //test classes
+    ├───bin
+    │   └───Debug
+    └───obj
+        └───Debug
 ```
-   mvn clean spring-boot:run
-```
 
-[OUTPUT]
-```
-  [...]
-    2024-05-30T08:42:27.632+02:00  INFO 1088 --- [payroll] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-    2024-05-30T08:42:27.640+02:00  INFO 1088 --- [payroll] [           main] ch.cpnves.payroll.PayrollApplication     : Started PayrollApplication in 2.839 seconds (process running for 3.086)
-    2024-05-30T08:42:27.684+02:00  INFO 1088 --- [payroll] [           main] c.c.payroll.Repositories.LoadDatabase    : Preloading Employee{id=1, name='Bilbo Baggins', role='burglar'}
-    2024-05-30T08:42:27.685+02:00  INFO 1088 --- [payroll] [           main] c.c.payroll.Repositories.LoadDatabase    : Preloading Employee{id=2, name='Frodo Baggins', role='thief'}
-  [...]
-```
+## Collaborate
 
-## Test using http requests
+* Take time to read some readme and find the way you would like to help other developers collaborate with you.
 
-Got the file [project]\src\main\java\ch\cpnves\payroll\Controllers\EmployeeController.java
+* They need to know:
+    * How to propose a new feature (issue, pull request)
+    * [How to commit](https://www.conventionalcommits.org/en/v1.0.0/)
+    * [How to use your workflow](https://nvie.com/posts/a-successful-git-branching-model/)
 
-Before all routes methods, you will find a curl sample.
+## License
 
-[INPUT]
-```
-curl -i localhost:8080/employees     
-````
+* [Choose the license adapted to your project](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
 
-[OUTPUT]
-```
-HTTP/1.1 200 
-Content-Type: application/json
-Transfer-Encoding: chunked
-Date: Thu, 30 May 2024 06:45:57 GMT
+## Contact
 
-[{"id":1,"name":"Bilbo Baggins","role":"burglar"},{"id":2,"name":"Frodo Baggins","role":"thief"}]
-```
+* How to get in contact with you? Discord, Trello, Issue?
