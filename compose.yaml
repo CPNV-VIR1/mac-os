@@ -9,11 +9,16 @@ services:
       - POSTGRES_URL=jdbc:postgresql://db:5432/macbook
       - POSTGRES_USER=macbook
       - POSTGRES_PASSWORD=macbook
+    networks:
+      - backend
+
   db:
     image: postgres
     restart: always
     volumes:
       - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
     environment:
       - POSTGRES_DB=macbook
       - POSTGRES_USER=macbook
