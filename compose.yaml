@@ -23,8 +23,6 @@ services:
       - POSTGRES_DB=macbook
       - POSTGRES_USER=macbook
       - POSTGRES_PASSWORD=macbook
-    ports:
-      - 5432:5432
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "macbook" ]
       interval: 10s
