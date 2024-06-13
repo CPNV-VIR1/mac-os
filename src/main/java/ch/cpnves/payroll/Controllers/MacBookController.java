@@ -36,7 +36,7 @@ public class MacBookController {
     /* curl sample :
     curl -i localhost:8080/macbook/1
     */
-    @GetMapping("/macbook/{id}")
+    @GetMapping("/macbooks/{id}")
     MacBook one(@PathVariable Long id){
         return repository.findById(id)
                 .orElseThrow(() -> new MacBookNotFoundException(id));
@@ -47,7 +47,7 @@ public class MacBookController {
         -H "Content-type:application/json" ^
         -d "{\"name\": \"Air\", \"capacity\": \"512 Go\"}"
      */
-    @PutMapping("/macbook/{id}")
+    @PutMapping("/macbooks/{id}")
     MacBook replaceMacBook(@RequestBody MacBook newMacBook, @PathVariable Long id) {
         return repository.findById(id)
                 .map(macBook -> {
@@ -64,7 +64,7 @@ public class MacBookController {
     /* curl sample :
     curl -i -X DELETE localhost:8080/macbook/2
     */
-    @DeleteMapping("/macbook/{id}")
+    @DeleteMapping("/macbooks/{id}")
     void deleteEmployee(@PathVariable Long id){
         repository.deleteById(id);
     }
