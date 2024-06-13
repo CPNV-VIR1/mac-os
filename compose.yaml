@@ -86,7 +86,7 @@ services:
       - ms-post
       - ms-put
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - ./nginx:/etc/nginx/
     networks:
