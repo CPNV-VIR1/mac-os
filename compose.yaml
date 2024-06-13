@@ -87,14 +87,12 @@ services:
       - ms-delete
       - ms-post
       - ms-put
-    ports:
+  ports:
       - 80:8080
-    volumes:
-      - ./nginx:/etc/nginx/
-    networks:
+  networks:
       - backend
       - frontend
-    environment:
+  environment:
       - SERVER=server
 networks:
   backend:
