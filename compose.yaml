@@ -88,7 +88,7 @@ services:
        - ms-post
        - ms-put
     ports:
-       - 80:80
+       - 8080:7000
     networks:
        - backend
        - frontend
