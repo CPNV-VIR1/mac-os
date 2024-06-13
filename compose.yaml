@@ -28,5 +28,23 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+
+  proxy:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx:/etc/nginx/
+    depends_on:
+      - server
+    networks:
+      - backend
+      - frontend
+    environment:
+      - SERVER=server
+networks:
+  backend:
+  frontend:
+
 volumes:
   db-data:
