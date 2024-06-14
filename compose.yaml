@@ -92,6 +92,8 @@ services:
        - ms-put
     ports:
        - 8080:7000
+    volumes:
+      - ./ms-api-gateway/nginx/logs:/var/log/nginx/
     networks:
        - backend
        - frontend
