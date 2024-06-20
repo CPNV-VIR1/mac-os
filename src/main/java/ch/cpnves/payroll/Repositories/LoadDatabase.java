@@ -14,8 +14,8 @@ public class LoadDatabase {
     @Bean
     CommandLineRunner initDatabase(MacBookRepository repository){
         return args->{
-            log.info("Preloading " + repository.save(new MacBook("Pro 16\"", "1 To")));
-            log.info("Preloading " + repository.save(new MacBook("Air 14\"", "256 Go")));
+            // log.info("Preloading " + repository.save(new MacBook("Pro 16\"", "1 To")));
+            // log.info("Preloading " + repository.save(new MacBook("Air 14\"", "256 Go")));
         };
     }
 }
