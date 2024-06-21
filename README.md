@@ -19,7 +19,15 @@ This project is a simple example of a REST API. The goal is to learn docker with
 ### On dev environment
 
 1. Clone the repository
-2. run ```docker-compose up --build```
+2. Start by creating main app image `docker build --tag app .`
+3. Then start all containers using this command `docker compose up --build`
+
+### On production environment
+
+1. Clone the repository
+2. Start by creating main app image `sudo docker build --tag app .`
+3. Then start all containers using this command `sudo docker compose up --build`
+
 ## Directory structure
 
 * Tip: try the tree bash command
