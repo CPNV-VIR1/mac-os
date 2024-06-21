@@ -20,9 +20,6 @@ public class MacBookController {
     */
     @DeleteMapping("/macbooks/{id}")
     void deleteEmployee(@PathVariable Long id) {
-        if (!repository.existsById(id)) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "MacBook not found");
-        }
         repository.deleteById(id);
     }
 }
