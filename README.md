@@ -33,13 +33,41 @@ This project is a simple example of a REST API. The goal is to learn docker with
 * Tip: try the tree bash command
 
 ```shell
-.
 ├── Dockerfile
+├── Makefile
 ├── README.Docker.md
 ├── README.md
 ├── compose.yaml
 ├── docs
-│   └── useCaseDiagram.wsd
+│   └── useCaseDiagram.wsd
+├── ms-api-gateway
+│   ├── Dockerfile
+│   ├── html
+│   │   └── 404.html
+│   └── nginx
+│       ├── api_backends.conf
+│       ├── api_conf.d
+│       │   ├── errors.conf
+│       │   └── macbooks_api.conf
+│       ├── api_gateway.conf
+│       ├── logs
+│       │   ├── access.log
+│       │   └── error.log
+│       └── nginx.conf
+├── ms-db
+│   └── Dockerfile
+├── ms-delete
+│   ├── Dockerfile                 >     Dockerfile that create image based on the main app and copy the specific controller
+│   └── MacBookController.java     >     Controller with only delete method
+├── ms-get
+│   ├── Dockerfile                 >     Dockerfile that create image based on the main app and copy the specific controller
+│   └── MacBookController.java     >     Controller with only get methods
+├── ms-post
+│   ├── Dockerfile                 >     Dockerfile that create image based on the main app and copy the specific controller
+│   └── MacBookController.java     >     Controller with only post method
+├── ms-put
+│   ├── Dockerfile                 >     Dockerfile that create image based on the main app and copy the specific controller
+│   └── MacBookController.java     >     Controller with only put method
 ├── mvnw
 ├── mvnw.cmd
 ├── pom.xml
@@ -55,7 +83,7 @@ For the commit please follow the [conventional commits](https://www.conventional
 
 ## License
 
-Apache-2.0
+[Apache-2.0](https://github.com/CPNV-VIR1/mac-os/blob/main/LICENSE)
 
 ## Contact
 
